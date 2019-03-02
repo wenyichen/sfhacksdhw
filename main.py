@@ -2,7 +2,14 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route('/form')
+# @app.route('/form')
+@app.route('/index')
+@app.route('/')
+
+def index():
+    user = 'Hello there'
+    return render_template('index.html', user = user)
+
 def form():
     return render_template('form.html')
 
