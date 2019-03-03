@@ -1,15 +1,31 @@
 @keyframes example {
-  0%   {left:0px; top:0px;}
-  25%  {left:100%; top:0px;}
-  50%  {left:200px; top:200px;}
-  75%  {left:0px; top:200px;}
-  100% {left:0px; top:0px;}
+  0%   {left:0px; top:0px; opacity: 0;}
+  25%  {left:100px; top:0px;}
+  50%  {left:100px; top:100px; opacity: 1;}
+  75%  {left:0px; top:100px;}
+  100% {left:0px; top:0px; opacity: 0;}
+}
+
+@-webkit-keyframes example {
+  0%   {left:0px; top:0px; opacity: 0;}
+  25%  {left:100px; top:0px;}
+  50%  {left:100px; top:100px; opacity: 1;}
+  75%  {left:0px; top:100px;}
+  100% {left:0px; top:0px; opacity: 0;}
 }
 
 #pics {
   width: 100px;
   height: 100px;
-  position: relative;
-  animation-name: example;
-  animation-duration: 4s;
+  position: fixed;
+  -webkit-animation: example 5s infinite;
+    animation: example 5s infinite;
+}
+
+#pics2 {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  -webkit-animation: example 5s infinite;
+    animation: example 5s infinite;
 }
