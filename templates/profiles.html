@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+    Can you see this?
+    {% for profile in profiles %}
+    <div><p>{{ profile.site }} and the code {{ profile.code }}</p></div>
+    {% endfor %}
+</body>
+{% endblock %}
