@@ -9,11 +9,11 @@
     {% endif %}
 </head>
 <body>
-    <div><a href="/index">Home</a></div>
-    <div><a href="/form">Form</a></div>
-    <div><a href="/profiles">Profiles</a></div>
-    <div><a href="/dangerzone">Login</a></div>
-
+    <div style="inline">
+        <span style="inline"><a href="/index">Home</a></span>
+        <span style="inline"><a href="/profiles">Profiles</a></span>
+        <span style="inline"><a href="/dangerzone">Login</a></span>
+    </div>
     {% block content %}{% endblock %}
 </body>
 </html>
