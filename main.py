@@ -34,9 +34,9 @@ def profiles():
 #    form = LoginForm()
 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+#@app.route('/')
+#def index():
+#    return render_template('index.html')
 
 @app.route('/user/<username>', methods=['POST'])
 def createUser(username):
