@@ -48,3 +48,6 @@ def submitted_form():
         email=email,
         site=site,
         comments=comments)
+@app.route('/dangerzone')
+def dangerzone():
+    return render_template('login_dangerzone.html')
