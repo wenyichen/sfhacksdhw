@@ -10,24 +10,15 @@ app = Flask(__name__)
 #login_manager.init_app(app)
 
 @app.route('/')
+@app.route('/index')
 def index():
     user = 'Hello there'
     return render_template('index.html', user = user)
 
-@app.route('/profiles')
-def profiles():
-    user = "Hervin"
-    profiles = [
-        {
-            'site' : 'Snapchat',
-            'code' : '...'
-        },
-        {
-            'site' : 'LinkedIn',
-            'code' : '...'
-        }
-    ]
-    return render_template('profiles.html', user = user, profiles = profiles)
+@app.route('/profiles/<username>')
+def profiles(username):
+    user = getUser(username)
+    return render_template('profiles.html', profiles = user)
 
 @app.route('/dangerzone')
 def dangerzone():

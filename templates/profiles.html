@@ -4,9 +4,8 @@
 
 {% block content %}
 <body>
-    Can you see this?
     {% for profile in profiles %}
-    <div><p>{{ profile.site }} and the code {{ profile.code }}</p></div>
+    <div><p>{{ profile.url }} and the code {{ profile.imgurl }}</p></div>
     {% endfor %}
 </body>
 {% endblock %}
