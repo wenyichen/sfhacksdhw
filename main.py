@@ -98,4 +98,3 @@ def addQr(username):
 
     # add url/img to user
     pass
->>>>>>> dee54a880989adf7f95238cfa9d3d757168f76e7
