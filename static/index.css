@@ -1,0 +1,15 @@
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  25%  {left:100%; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+
+#pics {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+}
