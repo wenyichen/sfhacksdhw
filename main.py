@@ -29,6 +29,10 @@ def profiles():
     ]
     return render_template('profiles.html', user = user, profiles = profiles)
 
+@app.route('/dangerzone')
+def dangerzone():
+    return render_template('login_dangerzone.html')
+    
 @app.route('/user/<username>', methods=['POST'])
 def createUser(username):
     #if successful 200 else 500
@@ -42,11 +46,6 @@ def createUser(username):
     blob.upload_from_string('', content_type='application/x-www-form-urlencoded;charset=UTF-8')
     #success: user created without problems
     return jsonify(success=True)
-
-
-@app.route('/dangerzone')
-def dangerzone():
-    return render_template('login_dangerzone.html')
 
 @app.route('/user/<username>', methods=['GET'])
 def getUser(username):
@@ -100,4 +99,3 @@ def addQr(username):
 
     # add url/img to user
     pass
->>>>>>> dee54a880989adf7f95238cfa9d3d757168f76e7
