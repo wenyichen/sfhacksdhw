@@ -43,6 +43,11 @@ def createUser(username):
     #success: user created without problems
     return jsonify(success=True)
 
+
+@app.route('/dangerzone')
+def dangerzone():
+    return render_template('login_dangerzone.html')
+
 @app.route('/user/<username>', methods=['GET'])
 def getUser(username):
     #if successful 200 else 400
@@ -95,3 +100,4 @@ def addQr(username):
 
     # add url/img to user
     pass
+>>>>>>> dee54a880989adf7f95238cfa9d3d757168f76e7
