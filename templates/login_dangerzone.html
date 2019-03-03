@@ -34,6 +34,13 @@
         sjs.parentNode.insertBefore(js, sjs);
       }(document, 'script', 'loginkit-sdk'));
     </script>
+<script type="text/javascript" src="//platform.linkedin.com/in.js">
+    api_key:   '865fj4d6sco8qp'
+    authorize: true
+    IN.User.authorize(callbackFunction, callbackScope);
+    IN.User.isAuthorized()
+    IN.API.Raw(url).method(methodType).body(bodyContent).result(resultCallback);
+</script>
 
 </body>
 {%  endblock content %}
