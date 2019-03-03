@@ -1,12 +1,35 @@
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
+#login_manager = LoginManager()
 
-@app.route('/index')
+#login_manager.init_app(app)
+
 @app.route('/')
+@app.route('/index')
 def index():
     user = 'Hello there'
     return render_template('index.html', user = user)
+
+@app.route('/profiles')
+def profiles():
+    user = "Hervin"
+    profiles = [
+        {
+            'site' : 'Snapchat',
+            'code' : '...'
+        },
+        {
+            'site' : 'LinkedIn',
+            'code' : '...'
+        }
+    ]
+    return render_template('profiles.html', user = user, profiles = profiles)
+
+#@app.route('/login', methods=['GET','POST'])
+#def login():
+#    form = LoginForm()
+
 
 @app.route('/form')
 def form():
