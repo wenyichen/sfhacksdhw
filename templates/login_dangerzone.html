@@ -5,7 +5,7 @@
     <title>Login Button</title>
 </head>
 {%  block content %}
-<body>
+
 <div id="my-login-button-target" />
     <script>
        window.snapKitInit = function () {
@@ -34,13 +34,18 @@
         sjs.parentNode.insertBefore(js, sjs);
       }(document, 'script', 'loginkit-sdk'));
     </script>
-<script type="text/javascript" src="//platform.linkedin.com/in.js">
-    api_key:   '865fj4d6sco8qp'
-    authorize: true
-    IN.User.authorize(callbackFunction, callbackScope);
-    IN.User.isAuthorized()
-    IN.API.Raw(url).method(methodType).body(bodyContent).result(resultCallback);
-</script>
+</div>
+
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+        api_key: '865fj4d6sco8qp' //Application key from your application
+        authorize: true            //check if user is already logged in and a cookie is present
+    </script>
+    <script type="in/Login">
+
+    </script>
+
+
+
 
 </body>
 {%  endblock content %}
